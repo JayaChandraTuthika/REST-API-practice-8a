@@ -1,0 +1,44 @@
+//API 1: GET TODOS BY STATUS
+GET http://localhost:3000/todos/?status=IN%20PROGRESS
+###
+
+
+
+//API 1 senario 2: GET TODOS BY PRIORITY
+GET http://localhost:3000/todos/?priority=HIGH
+###
+
+//API 1 senario 3: GET TODOS BY PRIORITY
+GET http://localhost:3000/todos/?priority=HIGH&status=IN%20PROGRESS
+###
+
+//API 1 senario 4: GET TODOS BY string
+GET http://localhost:3000/todos/?search_q=Play
+###
+
+//API 2 SCENARIO 1: GET TODOS BY TODO ID
+GET http://localhost:3000/todos/5/
+###
+
+//API 3:
+//API TO CREATE DATA ROWS
+POST http://localhost:3000/todos/
+Content-Type: application/json
+
+{
+  "id": 12,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
+###
+//API 4: UPDATE TODO
+PUT http://localhost:3000/todos/4
+Content-Type: application/json
+
+{ "priority": "HIGH" }
+###
+
+//API 5:DELETE TODO BY ID
+DELETE http://localhost:3000/todos/4
